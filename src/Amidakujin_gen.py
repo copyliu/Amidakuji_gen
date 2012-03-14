@@ -62,7 +62,7 @@ def textresult(AmiList):
     y = max([max(i) for i in AmiList])
     for i in range(x + 1):
         thisx = i
-        for j in range(y):
+        for j in range(y + 1):
             if thisx == 0:#跑到第一列
                 if j in AmiList[thisx]:
                     thisx += 1
@@ -78,6 +78,6 @@ def textresult(AmiList):
 
 
 if __name__ == "__main__":
-    MyList = genlist(80, max=10, min=2, height=100)
+    MyList = genlist(10, max=20, min=5, height=50)
     drawresult(MyList, mergin=30, scale=10, )#xLine=1,yLine=1)
     textresult(MyList)
